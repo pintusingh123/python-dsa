@@ -58,7 +58,13 @@ class Dll:
      while currentEle is not None:
        print(currentEle.data,end=" ")
        currentEle = currentEle.next
-
+   def print_reverse(self):
+      currentEle = self.head
+      while currentEle and currentEle.next is not None:
+        currentEle = currentEle.next
+      while currentEle is not None:
+        print(currentEle.data,end=" ")
+        currentEle = currentEle.prev
 dll = Dll()
 dll.insert_at_head(1)
 dll.insert_at_head(2)
@@ -67,3 +73,6 @@ dll.insert_at_tail(4)
 dll.insert_at_tail(40)
 dll.insert_at_position(5, 2)
 dll.print_lis()
+print()
+dll.print_reverse()
+ 
